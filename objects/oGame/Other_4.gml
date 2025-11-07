@@ -1,0 +1,1 @@
+audio_play_sound(snd_relaxing_music, 0, true);

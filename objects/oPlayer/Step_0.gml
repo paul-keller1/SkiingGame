@@ -31,12 +31,27 @@ if (height == 0 && jumpKeyPressed)
 
 if leftKey && !rightKey
 {
+    if dir != 0 and alarm[0] < 0 {
+        audio_play_sound(snd_snow1, 0, false);
+        alarm[0] = SOUND_DURATION;
+    }
+    dir = 0;
 	sprite_index = spr_player_left;
 } else if rightKey && !leftKey
-{
+{    
+    if dir != 1 and alarm[0] < 0 {
+        audio_play_sound(snd_snow3, 0, false);
+        alarm[0] = SOUND_DURATION;
+    }
+    dir = 1;
 	sprite_index = spr_player_right;
 } else
 {
+    if dir != 2 and alarm[0] < 0 {
+        audio_play_sound(snd_snow2, 0, false);
+        alarm[0] = SOUND_DURATION;
+    }
+    dir = 2;
 	sprite_index = spr_player_straight;
 }
 

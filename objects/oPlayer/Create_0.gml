@@ -9,3 +9,6 @@ height = 0;
 global.collisionCount = 0;
 
 debug = true;
+
+
+#macro SOUND_DURATION 80
