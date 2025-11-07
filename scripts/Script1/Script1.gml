@@ -1,0 +1,1 @@
+obstacles = [ oGateBlue, oGateRed, oTree];

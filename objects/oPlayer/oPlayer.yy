@@ -38,6 +38,9 @@
     "name":"spr_player_straight",
     "path":"sprites/spr_player_straight/spr_player_straight.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_player_straight",
+    "path":"sprites/spr_player_straight/spr_player_straight.yy",
+  },
   "visible":true,
 }

@@ -12,3 +12,6 @@ debug = true;
 
 
 #macro SOUND_DURATION 80
+
+
+tilemap_safety_nets = layer_tilemap_get_id("Barriers");

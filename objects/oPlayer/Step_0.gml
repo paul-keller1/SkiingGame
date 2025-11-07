@@ -22,6 +22,7 @@ if debugKeyPressed
 	yspd = moveSpd;
 }
 
+
 if (height == 0 && jumpKeyPressed) 
 {
 	height += 2;
@@ -62,24 +63,34 @@ if leftKey && !rightKey
 
 //collisions
 // x collision
-if place_meeting(x + xspd, y, oGateBlue) 
+
+
+
+
+for (var i = 0; i < array_length(global.obstacles); i++) {
+    if place_meeting(x + xspd, y, global.obstacles[i]) 
 {
 	global.collisionCount++;
 	var _pixelCheck = sign(xspd) //set variable to 1 pixel in movement direction
-	while !place_meeting(x + _pixelCheck, y, oGateBlue) {
+	while !place_meeting(x + _pixelCheck, y, global.obstacles[i]) {
 		x += _pixelCheck;
 	}
 	xspd = 0;
 }
-if place_meeting(x + xspd, y + yspd, oGateBlue) 
+if place_meeting(x + xspd, y + yspd, global.obstacles[i]) 
 {
 	global.collisionCount++;
 	var _pixelCheck = sign(yspd) //set variable to 1 pixel in movement direction
-	while !place_meeting(x, y + _pixelCheck, oGateBlue) {
+	while !place_meeting(x, y + _pixelCheck, global.obstacles[i]) {
 		y += _pixelCheck;
 	}
 	yspd = 0;
 }
+    
+}
 
-x += xspd;
-y += yspd;
+
+
+
+move_and_collide(xspd, yspd, tilemap_safety_nets);
+
