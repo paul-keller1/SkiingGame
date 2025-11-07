@@ -32,7 +32,7 @@ if (height == 0 && jumpKeyPressed)
 if leftKey && !rightKey
 {
     if dir != 0 and alarm[0] < 0 {
-        audio_play_sound(snd_snow1, 0, false);
+        audio_play_sound(snd_snow1, 0, false, 1, 0, random_range(0.5,1.5)); //different pitches
         alarm[0] = SOUND_DURATION;
     }
     dir = 0;
@@ -40,7 +40,7 @@ if leftKey && !rightKey
 } else if rightKey && !leftKey
 {    
     if dir != 1 and alarm[0] < 0 {
-        audio_play_sound(snd_snow3, 0, false);
+        audio_play_sound(snd_snow3, 0, false, 1, 0, random_range(0.5,1.5));
         alarm[0] = SOUND_DURATION;
     }
     dir = 1;
@@ -48,7 +48,7 @@ if leftKey && !rightKey
 } else
 {
     if dir != 2 and alarm[0] < 0 {
-        audio_play_sound(snd_snow2, 0, false);
+        audio_play_sound(snd_snow2, 0, false, 1, 0, random_range(0.5,1.5));
         alarm[0] = SOUND_DURATION;
     }
     dir = 2;
