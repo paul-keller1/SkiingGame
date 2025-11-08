@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oControls",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oLittleStone",
+  "eventList":[],
   "managed":true,
-  "name":"oControls",
+  "name":"oLittleStone",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -29,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_little_stone",
+    "path":"sprites/spr_little_stone/spr_little_stone.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
