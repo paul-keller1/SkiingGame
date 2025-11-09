@@ -16,8 +16,11 @@ if (room == rm_menu) {
     
     
     
-    if (alarm[1] < 0) xspd = (rightKey - leftKey) * moveSpd;
-    else xspd = distraction_dir;
+    if (alarm[1] < 0) {
+        xspd = (rightKey - leftKey) * moveSpd;
+    }else {
+        xspd = distraction_dir * moveSpd;
+    }
     if debugKeyPressed
     {
     	debug = !debug;
@@ -66,21 +69,22 @@ if (room == rm_menu) {
     
     
     //collisions
-    // x collision
     
     
     
     
-    for (var i = 0; i < array_length(global.obstacles); i++) {
+    for (var i = 0; i < array_length(global.obstacles); i++) { 
+        //x collisions
         if place_meeting(x + xspd, y, global.obstacles[i]) 
     {
     	global.collisionCount++;
     	var _pixelCheck = sign(xspd) //set variable to 1 pixel in movement direction
-    	while !place_meeting(x + _pixelCheck, y, global.obstacles[i]) {
+    	while !place_meeting(x +_pixelCheck, y, global.obstacles[i]) {
     		x += _pixelCheck;
     	}
     	xspd = 0;
     }
+        //y collisions
     if place_meeting(x + xspd, y + yspd, global.obstacles[i]) 
     {
     	global.collisionCount++;
@@ -90,8 +94,10 @@ if (room == rm_menu) {
     	}
     	yspd = 0;
     }
+        
+    }
     if place_meeting(x, y, oLittleStone) {
-        distraction_dir = (random(3) div 1) mod 3;
+        distraction_dir = (random(3) div 1) mod 3; //TODO: change to irandom_range
         alarm[1] = 20;
     }
 
@@ -101,7 +107,7 @@ if (room == rm_menu) {
     
     
     move_and_collide(xspd, yspd, tilemap_safety_nets);
-  }  
+  
      
     
 }

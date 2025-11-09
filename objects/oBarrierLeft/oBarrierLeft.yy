@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oTree",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oBarrierLeft",
+  "eventList":[],
   "managed":true,
-  "name":"oTree",
+  "name":"oBarrierLeft",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,12 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"tree_1_animation",
-    "path":"sprites/tree_1_animation/tree_1_animation.yy",
+    "name":"spr_barrier_left",
+    "path":"sprites/spr_barrier_left/spr_barrier_left.yy",
   },
-  "spriteMaskId":{
-    "name":"tree_1",
-    "path":"sprites/tree_1/tree_1.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }
